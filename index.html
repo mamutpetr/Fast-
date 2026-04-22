@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Cafe Tycoon</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HUD -->
+  <div id="hud">
+    <div id="hud-left">
+      <div id="money-display">
+        <span class="hud-icon">💰</span>
+        <span id="money-amount">0</span>
+      </div>
+      <div id="level-display">
+        <span class="hud-icon">⭐</span>
+        <span id="level-amount">Lv.1</span>
+      </div>
+    </div>
+    <div id="hud-right">
+      <button id="shop-btn" class="hud-btn">🛒 Shop</button>
+    </div>
+  </div>
+
+  <!-- Canvas -->
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- Virtual Joystick -->
+  <div id="joystick-zone">
+    <div id="joystick-base">
+      <div id="joystick-knob"></div>
+    </div>
+  </div>
+
+  <!-- Claim Button -->
+  <div id="claim-bar">
+    <button id="claim-btn">💸 Забрати зароблене в бота</button>
+  </div>
+
+  <!-- Shop Overlay -->
+  <div id="shop-overlay" class="hidden">
+    <div id="shop-panel">
+      <div id="shop-header">
+        <h2>🛒 Upgrades</h2>
+        <button id="shop-close">✕</button>
+      </div>
+      <div id="shop-balance">
+        <span>💰 Balance: </span><span id="shop-money">0</span>
+      </div>
+      <div id="shop-items"></div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast"></div>
+
+  <!-- Start Screen -->
+  <div id="start-screen">
+    <div id="start-panel">
+      <div id="start-logo">☕</div>
+      <h1 id="start-title">CAFE TYCOON</h1>
+      <p id="start-sub">Run your dream restaurant!</p>
+      <button id="start-btn">▶ Start Game</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
+
